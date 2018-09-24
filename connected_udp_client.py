@@ -12,6 +12,7 @@ class Helloer(DatagramProtocol):
         self.transport.write(b'hello') # no need for address
 
     def datagramReceived(self, data, addr):
+        data = data.decode()  # remove the annoying 'b' prefix
         print("received %r from server" % data, str(addr[0]) + ":"
             + str(addr[1]))
 
