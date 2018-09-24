@@ -11,7 +11,8 @@ class Helloer(DatagramProtocol):
         print("Listening at port", port)
 
     def datagramReceived(self, data, addr):
-        print("Heard %r from client %s" % (data, addr))
+        #print("Heard %r from client %s" % (data, addr))
+        print("Heard request from client " , addr)
         # print("Heard request from %s" % addr.transport.getHost.host)
         self.transport.write(b'Hello world', addr) # no need for address
 
