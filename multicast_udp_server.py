@@ -26,7 +26,7 @@ class MulticastPingPong(DatagramProtocol):
             # Rather than replying to the group multicast address, we send the
             # reply directly (unicast) to the originating port:
             self.transport.write(b"Server: Pong", address)
-        if datagram == "Hello world"
+        if datagram == "Hello world":
             self.transport.write(b"From Server: Hello world", address)
 
 
